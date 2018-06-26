@@ -1,2 +1,2 @@
 # vue-bio
-My Professional Biography
+<h1>My Professional Biography</h1>
