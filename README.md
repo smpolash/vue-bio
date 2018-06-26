@@ -1,2 +1,2 @@
-# <h1>Vue-Bio</h1>
+# Vue-Bio
 My Professional Biography
