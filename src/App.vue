@@ -1,15 +1,19 @@
 <template>
-  <div id="app">
+  <main id="app" class="app">
     <!-- <img src="./assets/logo.png"> -->
     <Header></Header>
     <router-view/>
-  </div>
+    <Footer></Footer>
+  </main>
 </template>
 <script>
+// Import <header>, <footer> layout..
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+// Main App component
 export default {
   name: 'App',
-  components: { Header },
+  components: { Header, Footer },
   beforeCreate: function () {
     // Called after instance has beed initialized; before $data, $watch;
     console.log('beforeCreate')
@@ -54,12 +58,34 @@ export default {
 </script>
 
 <style>
-#app {
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin: 0px;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.container {
+  align-self: stretch;
+}
+.header {
+  background: #f4f4f4;
+  min-height: 100px;
+}
+.footer {
+  height: 50px;
+  background: #f4f4f4;
+  justify-self: flex-end;
 }
 </style>

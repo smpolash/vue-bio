@@ -8,7 +8,7 @@ export default {
   name: 'Header',
   data () {
     return {
-      title: 'Welcome to Your Vue.js App'
+      title: 'Welcome to Vue.js'
     }
   }
 }
