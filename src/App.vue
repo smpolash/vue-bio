@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
+    <Header></Header>
     <router-view/>
   </div>
 </template>
-
 <script>
+import Header from '@/components/Header'
 export default {
   name: 'App',
+  components: { Header },
   beforeCreate: function () {
     // Called after instance has beed initialized; before $data, $watch;
     console.log('beforeCreate')
@@ -58,6 +60,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 0px;
 }
 </style>
