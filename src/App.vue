@@ -1,10 +1,14 @@
 <template>
-  <main id="app" class="app">
+  <el-container id="app" class="app">
     <!-- <img src="./assets/logo.png"> -->
-    <Header></Header>
-    <router-view/>
-    <Footer></Footer>
-  </main>
+    <el-header>Header</el-header>
+    <el-aside width="200px">Aside</el-aside>
+    qa
+    <el-main>
+      <router-view/>
+    </el-main>
+    <el-footer>Footer</el-footer>
+  </el-container>
 </template>
 <script>
 // Import <header>, <footer> layout..
@@ -58,34 +62,37 @@ export default {
 </script>
 
 <style>
-html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
+  .el-header, .el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
 
-.app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin: 0px;
-  height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-}
-.container {
-  align-self: stretch;
-}
-.header {
-  background: #f4f4f4;
-  min-height: 100px;
-}
-.footer {
-  height: 50px;
-  background: #f4f4f4;
-  justify-self: flex-end;
-}
+  .el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+  }
+
+  .el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    line-height: 160px;
+  }
+
+  body > .el-container {
+    margin-bottom: 40px;
+  }
+
+  .el-container:nth-child(5) .el-aside,
+  .el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+  }
+
+  .el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+  }
 </style>
