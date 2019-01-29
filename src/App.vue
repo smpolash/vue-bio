@@ -3,7 +3,7 @@
     <!-- <img src="./assets/logo.png"> -->
     <el-header>Header</el-header>
     <el-aside width="200px">Aside</el-aside>
-    qa
+
     <el-main>
       <router-view/>
     </el-main>
